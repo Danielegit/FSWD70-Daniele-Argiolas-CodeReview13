@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!-- {{ event.id }} -->
+<div id="background">
+    
+</div>
+
+<div class="container show_cont p-5">
+    <h1>{{ event.name }}</h1>
+    <div>
+        <img class="w-100" src="{{ event.img }}" alt="{{ event.name }}">
+    </div>
+    <p class="descrip mt-5 mb-5">{{ event.descrip }}</p>
+
+    <div class="row d-flex justify-content-around mt-5">
+        <div  class="col-lg-4 mb-5">
+            <h5>Info:</h5> 
+            <p><strong>Available Places: </strong>{{ event.capacity }}</p>
+            <p><strong>Events Date: </strong>{% if event.dateTime %}{{ event.dateTime|date('Y-m-d H:i:s') }}{% endif %}</p>
+            <p><strong>Events Type: </strong>{{ event.type }}</p>
+        </div>
+        <div class="col-lg-4 mb-5">
+            <h5>Address:</h5>
+            <p><strong>Street: </strong>{{ event.streetNum }}</p>
+            <p><strong>Postal: </strong>{{ event.postalCode }}</p>
+            <p><strong>City: </strong>{{ event.city }}</p>
+        </div>
+        <div class="col-lg-4 mb-5">
+            <h5>Contacts:</h5>
+            <p><strong>Email: </strong>{{ event.email }}</p>
+            <p><strong>Phone: </strong>{{ event.phone }}</p>
+            <p><strong>Web Site: </strong><a href="#">{{ event.web }}</a></p>
+        </div>
+    </div>
+
+    <div class="container row text-center d-flex justify-content-center">
+        <div class="col-12"><h2 class="pb-5 text-center">Actions: </h2></div>  
+        <div class="col-lg-4 col-md-4 clos-sm-4 mb-4 col-12">
+            <a href="{{ path('event_index') }}"><button class="btn btn-primary w-50">Home</button></a>
+        </div>    
+        <div class="col-lg-4 col-md-4 clos-sm-4 mb-4 col-12"> 
+            <a href="{{ path('event_edit', { 'id': event.id }) }}"><button class="btn btn-success w-50">Edit</button></a>
+        </div> 
+        <div class="col-lg-4 col-md-4 clos-sm-4 mb-4 col-12">                  
+                {{ form_start(delete_form) }}
+                    <input type="submit" class="btn btn-danger w-50" value="Delete">
+                {{ form_end(delete_form) }}
+        </div>
+    </div> 
+</div>
+    
+   
+{% endblock %}
+
+
+            
+            
+           
+             
+            
+      
+             
+        
+                      
+            
+       
+                
+
+    
+        
+            
+             
+                
+            
+            
+                
+            
+           
+                
+            
+          
+                
+            
+            
+     
+                
+            
+
+               
+      
+    
+
+  
+            

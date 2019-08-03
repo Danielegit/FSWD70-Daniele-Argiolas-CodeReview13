@@ -1,0 +1,206 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+label {
+  cursor: pointer;
+}
+label:focus {
+  outline: none;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(245,249,240,0.6);
+  width: 240px;
+  height: 100%;
+  transform: translate3d(-240px, 0, 0);
+  transition: transform 0.35s;
+}
+#menusort{
+  background: rgba(245,249,240,0.9);
+}
+.menu label.menu-toggle {
+  position: absolute;
+  right: -60px;
+  width: 60px;
+  height: 60px;
+  line-height: 0px;
+  display: block;
+  padding: 0;
+  text-indent: -9999px;
+  background: rgba(255,116,0,0.6) url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
+}
+.menu ul li > label {
+  background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50%/16px 16px no-repeat;
+}
+.menu ul li a, .menu ul li label {
+  display: block;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+}
+.menu ul li a:hover, .menu ul li label:hover {
+  color: white;
+  background-color: rgba(255,116,0,0.6) ;
+}
+
+/* hide inputs */
+.menu-checkbox {
+  display: none;
+}
+
+/* hide navigation icon for sublabels */
+.menu .menu label.menu-toggle {
+  background: none;
+}
+
+/* fade in checked menu */
+.menu-checkbox:checked + .menu {
+  transform: translate3d(0, 0, 0);
+}
+
+/* for show */
+html, body {
+  height: 100%;
+}
+body{
+
+
+  background-color: ivory;
+
+}
+
+  
+
+
+
+#background {
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: url('../img/bg0.jpg') 50% 50%/cover;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #DC3545;
+}
+ 
+p {
+  margin-bottom: 15px;
+}
+
+#info {
+  display: table;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}
+#info #info-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+}
+#info #info-content h1 {
+  color: #fff;
+  border: 3px solid #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 22px;
+  font-weight: normal;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+}
+#info #info-content h1 strong {
+  display: block;
+  font-size: 26px;
+}
+#foot{
+ 
+  position: relative;
+  bottom: -50px;
+  width: 100%;
+
+}
+
+.divCommercial{
+  z-index: 0.2;
+}
+/* ______________________ */
+
+.img_height{
+ height: 14em;
+}
+.descrip{
+  font-size: 20px;
+}
+.cards{
+-webkit-box-shadow: 0px 0px 7px 0px rgba(82,77,82,1);
+-moz-box-shadow: 0px 0px 7px 0px rgba(82,77,82,1);
+box-shadow: 0px 0px 7px 0px rgba(82,77,82,1);
+background-color: rgba(229,235,238,0.4);
+}
+.indextitle{
+  padding-bottom: 10%;
+}
+.myrow{
+  border-radius: 9%;
+  border-bottom: 1px solid #DC3545;
+}
+.show_cont{
+  background-color: rgba(229,235,238,0.8);
+  border-radius: 6% 1% 6% 1%;
+}
+.form{
+  background-color: rgba(237,237,237,0.7);
+
+}
+.form input,select,textarea{
+  width: 100%;
+  font-size: 23px;
+  
+}
+.form label{
+  width: 100%;
+  text-align: center; 
+  font-size: 20px;
+  margin-top: 16px;
+
+}
+.form select{
+  width:  20%;
+}
+#appbundle_event_dateTime > div{
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  font-size: 20px;
+  margin-bottom: 4px;
+
+}
+#appbundle_event_type{
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#foot{
+   
+  border-top: 1px solid #DC3545; 
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(120,115,115,1);
+-moz-box-shadow: 0px 0px 24px 0px rgba(120,115,115,1);
+box-shadow: 0px 0px 24px 0px rgba(120,115,115,1);
+}
+

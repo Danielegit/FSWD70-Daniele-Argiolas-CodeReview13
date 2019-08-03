@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container form">
+ <div class="container d-flex justify-content-between">
+            <a href="{{ path('event_index') }}"><button class="btn btn-primary">Home</button></a>
+      
+            {{ form_start(delete_form) }}
+                <input type="submit" class="btn btn-danger" value="Delete">
+            {{ form_end(delete_form) }}
+     </div>   
+
+    <h1 class="text-center">Event edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" class="btn btn-success" value="Edit" />
+    {{ form_end(edit_form) }}
+
+</div>   
+    
+{% endblock %}

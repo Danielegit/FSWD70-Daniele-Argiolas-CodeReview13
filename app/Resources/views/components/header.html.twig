@@ -1,0 +1,45 @@
+   <div id="wrapper">
+  <div id="info">
+    <div id="info-content">
+      <h1>Big Events <strong>Enjoy your life</strong></h1>
+    </div>
+  </div>
+
+  <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+  <div class="menu">
+    <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>      
+        <label for="menu-3">Sort</label>
+        <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+        <div class="menu">
+          <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+          <ul id="menusort">
+            <li>
+              <a href="/">See All</a>
+            </li>
+            <li>
+              <a href="/sort/music">Music Events</a>
+            </li>        
+            <li>
+              <a href="/sort/theater">Theater Events</a>
+            </li>
+            <li>
+              <a href="/sort/sport">Sport Events</a>
+            </li>
+            <li>
+              <a href="/sort/movie">Movies</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+   
+      <li>
+        <a href="{{ path('event_new') }}">Create </a>
+      </li>
+    </ul>
+  </div>
+</div><!-- #wrapper -->

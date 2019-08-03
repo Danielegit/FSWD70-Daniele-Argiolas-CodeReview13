@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Events Vienna</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    
+</head>
+<body>
+    <header>
+        {% include 'components/header.html.twig' %}
+    </header><!-- /header -->
+    <div id="background">
+        
+    </div>
+    <div class="container-flex p-5">
+    
+        {% block body %}
+            
+        {% endblock %}
+
+    </div>
+    <div class="footer">
+        {% include 'components/footer.html.twig' %}
+    </div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+{% block script %}{% endblock %}
+            
+
+
+</body>
+</html>

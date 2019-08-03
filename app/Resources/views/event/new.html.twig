@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+		<div class="container form pl-5 pr-5">
+		     <div class="container d-flex justify-content-start">
+		            <a href="{{ path('event_index') }}"><button class="btn btn-primary">Home</button></a>
+		     </div>   
+
+		    <h1  class="text-center">Event creation</h1>
+
+		    {{ form_start(form) }}
+		        {{ form_widget(form) }}
+		        <input type="submit"  class="btn btn-success" value="Create" />
+		    {{ form_end(form) }}
+
+		</div>
+
+{% endblock %}

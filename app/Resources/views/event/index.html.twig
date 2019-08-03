@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1 class="text-center m-5 indextitle text-white">Welcome To bigevents.com</h1>
+<div class="row d-flex justify-content-around mt-5 pb-5 myrow">
+
+
+
+
+    {% for event in events %}       
+ 
+    <div class="col-lg-3 col-md-4 col-sm-5 m-1  p-1 cards mt-5">  
+        <div class="text-center">
+           
+            <div class="w-100">
+                <img  class="w-100 img_height" src="{{ event.img }}" alt="{{ event.name }}">
+            </div>
+            <h4 class="text-danger mt-3">
+                {{ event.name }}
+            </h4>
+            <div>
+                <p>{{ event.streetNum }}, {{ event.city }} {{ event.postalCode }}</p>
+                <p>{% if event.dateTime %}{{ event.dateTime|date('Y-m-d, H:i') }}{% endif %}</p>
+                <p>Type: {{ event.type }}</p>
+            </div>
+
+         
+            <div class="w-100  d-flex justify-content-center">   
+                <div class="col-lg-6 col-md-6  p-0">                                 
+                         <a href="{{ path('event_show', { 'id': event.id }) }}" >
+                        <h4 class="text-danger">Show</h4>
+                         </a>
+                 </div> 
+                 <div class="col-lg-6 col-md-6  p-0">  
+                         <a href="{{ path('event_edit', { 'id': event.id }) }}" >
+                         <h4 class="text-danger">Edit</h4>
+                        </a>  
+                </div> 
+            </div>               
+        </div>
+    </div>
+  
+    {% endfor %}
+</div>  
+
+    
+{% endblock %}
+{% block script %}<script src="script/script.js"></script>{% endblock %}
